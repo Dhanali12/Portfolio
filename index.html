@@ -5,7 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dhanali Vijay Khairnar | Strategic IT Analyst & MBA Consultant</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght=300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        html.lenis, html.lenis body { height: auto; }
+        .lenis.lenis-smooth { scroll-behavior: auto !important; }
+        .lenis.lenis-smooth [data-lenis-prevent] { scroll-behavior: contain; }
+        .lenis.lenis-stopped { overflow: hidden; }
+        .lenis.lenis-scrolling iframe { pointer-events: none; }
+    </style>
 </head>
 <body>
 
@@ -22,7 +30,7 @@
 
 <header class="hero">
     <div class="container">
-        <h1>Dhanali Vijay Khairnar</h1>
+        <h1 class="reveal-text">Dhanali Vijay Khairnar</h1>
         <p class="subtitle">Strategic IT Analyst · MBA Consultant · Visual Storyteller</p>
         <p class="meta">Utrecht, Netherlands &nbsp;·&nbsp; +31 619 534 120 &nbsp;·&nbsp; dhanalikhairnar99@gmail.com</p>
         <p class="availability">
@@ -32,28 +40,28 @@
     </div>
 </header>
 
-<div class="container main-content">
+<div class="container asymmetric-layout">
 
-    <section class="card">
+    <section class="card wide">
         <h2>🇳🇱 International Mobility & Dutch Market Experience</h2>
         <hr>
         <ul>
             <li><strong>On-Site Public Sector Leadership:</strong> Selected to relocate to Utrecht, Netherlands, to serve as the on-site Team Lead for the <em>Openbaar Ministerie</em> (Dutch Public Prosecution Service).</li>
-            <li><strong>Local Academic Roots:</strong> Completing an MBA in Big Data Analytics at The Hague University of Applied Sciences (Graduating July 2026). Consultancy Project (9.1), Big Data for Business (9.0), and Machine Learning (8.3).</li>
+            <li><strong>Local Academic Roots:</strong> Completing an MBA in Big Data Analytics at The Hague University of Applied Sciences (Graduating July 2026). Top marks in Big Data for Business (9.0) and Machine Learning (8.3).</li>
             <li><strong>Cultural Integration:</strong> Actively developing Dutch language skills (Beginner level) to complement professional fluency in English.</li>
         </ul>
     </section>
 
-    <section class="card gold-edge">
+    <section class="card gold-edge shift-left">
         <div class="planner-status"><span class="planner-dot"></span>Currently Building</div>
-        <h2>🗓️ Digital Planner website</h2>
+        <h2>🗓️ AI-Powered Planner App</h2>
         <hr>
-        <p class="body-text">A daily digital planner in which one can plan and schedule the daily tasks along with a visualization of the tasks.</p>
+        <p class="body-text">A smart productivity tool that blends data-driven scheduling with an intuitive, design-first interface — putting machine learning to work on the everyday challenge of time management.</p>
         <div class="grid-2">
-            <div class="feature feature-gold"><h3>Tracker and notes section</h3><p>This section allow to write summaries or notes.</p></div>
+            <div class="feature feature-gold"><h3>Intelligent Scheduling</h3><p>ML-powered prioritisation that learns your working patterns, energy rhythms, and deadlines to suggest the optimal time for every task.</p></div>
             <div class="feature feature-gold"><h3>Visual-First Design</h3><p>Clean, accessible UI built on the same design principles I apply in enterprise deliveries — complex workflows kept beautifully simple.</p></div>
-            <div class="feature feature-gold"><h3>Data & Analytics Layer</h3><p>Personal productivity dashboards using visualisations — track focus streaks, completion rates, and goal progress at a glance.</p></div>
-            <div class="feature feature-gold"><h3>Simplification</h3><p>Built with the audience in mind, supporting simple yet beautiful UX from the ground up.</p></div>
+            <div class="feature feature-gold"><h3>Data & Analytics Layer</h3><p>Personal productivity dashboards using Power BI-inspired visualisations — track focus streaks, completion rates, and goal progress at a glance.</p></div>
+            <div class="feature feature-gold"><h3>Dutch & English Localisation</h3><p>Built with a Netherlands-first audience in mind, supporting full bilingual UX from the ground up.</p></div>
         </div>
         <div class="tag-container">
             <span class="tag tag-gold">Python</span>
@@ -65,7 +73,7 @@
         </div>
     </section>
 
-    <section class="card wine-edge">
+    <section class="card wine-edge shift-right">
         <h2>🎨 Where Data Meets Design: My Creative Edge</h2>
         <hr>
         <p class="body-text">I bridge the gap between complex analytical back-ends and intuitive, user-friendly front-ends by leveraging a background in formal graphic design and creative internship experience.</p>
@@ -75,7 +83,7 @@
         </div>
     </section>
 
-    <section class="card">
+    <section class="card half-width">
         <h2>🏛️ MBA Consultancy Project & Strategy</h2>
         <p class="role-title"><strong>Strategy Consultant</strong> · Out of the Box International & Back to Battery (Clean Tech Start-up)</p>
         <hr>
@@ -84,11 +92,11 @@
             <span class="tag">McKinsey 7S Framework</span>
             <span class="tag">RACI Matrix</span>
             <span class="tag">SWOT & Porter's Five Forces</span>
-            <span class="tag">Agile scrum methodologies</span>
+            <span class="tag">Machine Learning Models</span>
         </div>
     </section>
 
-    <section class="card">
+    <section class="card half-width shift-up">
         <h2>🎯 My Leadership Model: "Velocity & Bridge"</h2>
         <hr>
         <div class="leadership-block">
@@ -101,7 +109,7 @@
         </div>
     </section>
 
-    <section class="card">
+    <section class="card wide">
         <h2>🛠️ Technical & Creative Stack</h2>
         <hr>
         <div class="grid-2">
@@ -132,7 +140,26 @@
     <p>&copy; 2026 Dhanali Vijay Khairnar &nbsp;·&nbsp; Designed with passion, precision, and a love for cats 🐈</p>
 </footer>
 
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+
 <script>
+/* ============================================================
+   INITIALIZE LENIS SMOOTH SCROLL
+   ============================================================ */
+const lenis = new Lenis({
+  duration: 1.4,      // Higher numbers = smoother, more luxurious weighted scroll
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Clean physics formula
+  direction: 'vertical',
+  gestureDirection: 'vertical',
+  smoothWaveform: true
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
+
 /* ============================================================
    CHERRY BLOSSOM PETALS
    ============================================================ */
@@ -232,20 +259,16 @@
         var raw      = Math.min(1, Math.max(0, scrolled / total));
         var t        = ease(raw);
 
-        // Standard widget sizing and repositioning calculations
         widget.style.top = lerp(TOP_START, TOP_END, t) + 'px';
         widget.style.width = lerp(W_START, W_END, t) + 'px';
 
-        // 3-Stage Transition Logic
         if (raw <= 0.5) {
-            // First half of page: Image 1 fades out, Image 2 fades in
-            var stageProgress = raw * 2; // scale to 0 - 1
+            var stageProgress = raw * 2;
             kittenImg.style.opacity = (1 - stageProgress).toFixed(3);
             adultImg.style.opacity  = stageProgress.toFixed(3);
             adultImg2.style.opacity = "0";
         } else {
-            // Second half of page: Image 2 fades out, Image 3 fades in
-            var stageProgress = (raw - 0.5) * 2; // scale to 0 - 1
+            var stageProgress = (raw - 0.5) * 2;
             kittenImg.style.opacity = "0";
             adultImg.style.opacity  = (1 - stageProgress).toFixed(3);
             adultImg2.style.opacity = stageProgress.toFixed(3);
